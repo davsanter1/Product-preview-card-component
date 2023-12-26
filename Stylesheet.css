@@ -3,7 +3,7 @@
 :root{
     --Darkcyan: hsl(158, 36%, 37%);
     --Cream: hsl(30, 38%, 92%);
-    --Verydarkblue: hsl(212, 21%, 14%);
+    --Verydarkblue: hsl(163, 36%, 22%);
     --Darkgrayishblue: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
 }
@@ -45,7 +45,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:space-around;  
-  
     width: 50%;
     padding: 2em;
 }
@@ -91,11 +90,62 @@ button{
     outline: 0;
     border: 0;
     cursor: pointer;
+    transition: .3s;
 }
 
 h3{
     font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
+    font-weight: 500;
     font-size: 14px;
     color: var(--Darkgrayishblue);
 }
+
+button:hover{
+    background-color: var(--Verydarkblue);
+}
+
+@media screen and (max-width: 767px) {
+    body {
+      align-items: center;
+      margin: 0; 
+    }
+  
+    .container {
+      flex-direction: column;
+      width: 93%; 
+      margin: 0 auto;
+      max-height: 100vh;
+      overflow: hidden; 
+    }
+  
+    .prod-picture {
+      width: 100%;
+      content: url(/images/image-product-mobile.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+    .prod-picture img {
+      display: none; 
+    }
+  
+    .prod-description {
+      width: 100%;
+      padding: 1.75em;
+    }
+
+    h3{
+        padding-bottom: 1em;
+    }
+
+    p{
+        padding-top: 1.5em;
+        padding-bottom: 1.1em;
+    }
+    button{
+        margin-top: 1em;
+        padding: 1.5em;
+    }
+  }
+  
